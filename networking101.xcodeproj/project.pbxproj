@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,11 @@
 		E46483042532F42D0001D299 /* networking101.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E46483022532F42D0001D299 /* networking101.xcdatamodeld */; };
 		E464830F2532F42D0001D299 /* networking101Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E464830E2532F42D0001D299 /* networking101Tests.swift */; };
 		E464831A2532F42D0001D299 /* networking101UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46483192532F42D0001D299 /* networking101UITests.swift */; };
+		E464832C2532F6A10001D299 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E464832B2532F6A10001D299 /* Alamofire */; };
+		E4648332253431FB0001D299 /* requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4648331253431FB0001D299 /* requests.swift */; };
+		E464835525344B0A0001D299 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4648344253448770001D299 /* Film.swift */; };
+		E4648368253458BF0001D299 /* Displayable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4648367253458BF0001D299 /* Displayable.swift */; };
+		E464836D2534688B0001D299 /* Films.swift in Sources */ = {isa = PBXBuildFile; fileRef = E464836C2534688B0001D299 /* Films.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,10 @@
 		E46483152532F42D0001D299 /* networking101UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = networking101UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E46483192532F42D0001D299 /* networking101UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = networking101UITests.swift; sourceTree = "<group>"; };
 		E464831B2532F42D0001D299 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4648331253431FB0001D299 /* requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = requests.swift; sourceTree = "<group>"; };
+		E4648344253448770001D299 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		E4648367253458BF0001D299 /* Displayable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Displayable.swift; sourceTree = "<group>"; };
+		E464836C2534688B0001D299 /* Films.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Films.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E464832C2532F6A10001D299 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +109,8 @@
 		E46482F62532F42A0001D299 /* networking101 */ = {
 			isa = PBXGroup;
 			children = (
+				E4648343253448650001D299 /* models */,
+				E4648330253431D80001D299 /* HTTP */,
 				E46482F72532F42A0001D299 /* networking101App.swift */,
 				E46482F92532F42A0001D299 /* ContentView.swift */,
 				E46482FB2532F42D0001D299 /* Assets.xcassets */,
@@ -136,6 +148,24 @@
 			path = networking101UITests;
 			sourceTree = "<group>";
 		};
+		E4648330253431D80001D299 /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				E4648331253431FB0001D299 /* requests.swift */,
+				E4648367253458BF0001D299 /* Displayable.swift */,
+			);
+			path = HTTP;
+			sourceTree = "<group>";
+		};
+		E4648343253448650001D299 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				E4648344253448770001D299 /* Film.swift */,
+				E464836C2534688B0001D299 /* Films.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,6 +182,9 @@
 			dependencies = (
 			);
 			name = networking101;
+			packageProductDependencies = (
+				E464832B2532F6A10001D299 /* Alamofire */,
+			);
 			productName = networking101;
 			productReference = E46482F42532F42A0001D299 /* networking101.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +256,9 @@
 				Base,
 			);
 			mainGroup = E46482EB2532F42A0001D299;
+			packageReferences = (
+				E464832A2532F6A10001D299 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = E46482F52532F42A0001D299 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -266,8 +302,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				E46483042532F42D0001D299 /* networking101.xcdatamodeld in Sources */,
+				E464836D2534688B0001D299 /* Films.swift in Sources */,
+				E464835525344B0A0001D299 /* Film.swift in Sources */,
+				E4648368253458BF0001D299 /* Displayable.swift in Sources */,
 				E46483012532F42D0001D299 /* Persistence.swift in Sources */,
 				E46482FA2532F42A0001D299 /* ContentView.swift in Sources */,
+				E4648332253431FB0001D299 /* requests.swift in Sources */,
 				E46482F82532F42A0001D299 /* networking101App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,6 +628,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E464832A2532F6A10001D299 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E464832B2532F6A10001D299 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E464832A2532F6A10001D299 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		E46483022532F42D0001D299 /* networking101.xcdatamodeld */ = {
